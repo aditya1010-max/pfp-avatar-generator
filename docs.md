@@ -1,0 +1,9 @@
+seed
+ ↓
+hash
+ ↓
+colors
+ ↓
+pattern
+ ↓
+visual

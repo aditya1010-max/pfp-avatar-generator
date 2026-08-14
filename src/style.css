@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+
+  display: grid;
+  place-items: center;
+
+  background: white;
+
+  border-radius: 50%;
+}
+
+.avatar-ring {
+  width: 100%;
+  height: 100%;
+
+  padding: 10px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  border: 2px solid #0f0f0f69;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.293);
+}
+
+.avatar-pattern {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.avatar-initials {
+  position: relative;
+  z-index: 2;
+
+  font-size: 42px;
+  font-weight: 800;
+
+  color: rgb(255, 255, 255);
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.25);
+
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #f5f5f5;
+  color: #171717;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  width: min(900px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.header p {
+  margin: 0;
+  color: #666;
+}
+
+.generator {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+
+  padding: 32px;
+
+  background: rgb(162, 203, 203);
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.controls label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.seed-input {
+  display: flex;
+  gap: 8px;
+}
+
+.seed-input input {
+  flex: 1;
+  min-width: 0;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  outline: none;
+}
+
+.seed-input input:focus {
+  border-color: #999;
+}
+
+.seed-input button {
+  padding: 12px 16px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #171717;
+  color: white;
+
+  cursor: pointer;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 260px;
+
+  border: 1px dashed #d4d4d4;
+  border-radius: 12px;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #a3a3a3;
+  color: white;
+
+  font-size: 48px;
+  font-weight: 800;
+}
+
+@media (max-width: 700px) {
+  .generator {
+    grid-template-columns: 1fr;
+  }
+}
