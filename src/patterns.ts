@@ -10,6 +10,7 @@ type PatternType =
   | "constellation"
   | "halftone"
   | "diamonds"
+  | "generateZigzag"
 
 export function generatePattern(
   seed: string,
@@ -29,6 +30,7 @@ export function generatePattern(
     "constellation",
     "halftone",
     "diamonds",
+    "generateZigzag"
   ];
 
   const pattern =
@@ -58,6 +60,9 @@ export function generatePattern(
 
     case "diamonds":
       return generateDiamonds(palette, random);
+
+    case "generateZigzag":
+      return generateZigzag(palette, random);
 
 
   }
@@ -268,3 +273,38 @@ function generateDiamonds(
   `;
 }
 
+
+function generateZigzag(
+  palette: ColorPalette,
+  _random: () => number,
+): string {
+  return `
+    linear-gradient(
+      135deg,
+      ${palette.secondary} 25%,
+      transparent 25%
+    )
+    -20px 0 / 40px 40px,
+
+    linear-gradient(
+      225deg,
+      ${palette.accent} 25%,
+      transparent 25%
+    )
+    -20px 0 / 40px 40px,
+
+    linear-gradient(
+      315deg,
+      ${palette.secondary} 25%,
+      transparent 25%
+    )
+    0 0 / 40px 40px,
+
+    linear-gradient(
+      45deg,
+      ${palette.accent} 25%,
+      ${palette.primary} 25%
+    )
+    0 0 / 40px 40px
+  `;
+}
