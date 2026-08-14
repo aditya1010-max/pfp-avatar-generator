@@ -13,7 +13,7 @@ const majorColors = [
   "#dc2626c6", // red
   "#eab208cb", // yellow
   "#313131", // black
-  "#ffffff", 
+  "#f4f4b0", 
 ];
 
 export function generatePalette(seed: string): ColorPalette {
@@ -24,13 +24,13 @@ export function generatePalette(seed: string): ColorPalette {
 
   const baseHue = Math.floor(random() * 360);
 
-const primary = `hsla(${baseHue}, 65%, 55%, 0.5)`;     
+const primary = `hsla(${baseHue}, 65%, 55%, 0.65)`;     
 
 const secondaryHue = (baseHue + 35) % 360;
-const secondary = `hsla(${secondaryHue}, 60%, 45%, 0.5)`;
+const secondary = `hsla(${secondaryHue}, 60%, 45%, 0.65)`;
 
 const accentHue = (baseHue + 180) % 360;
-const accent = `hsla(${accentHue}, 70%, 65%, 0.55)`;
+const accent = `hsla(${accentHue}, 70%, 65%, 0.75)`;
 
   return {
     major,

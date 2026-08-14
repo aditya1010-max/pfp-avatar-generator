@@ -56,9 +56,6 @@ const avatarRing =
 const avatarPattern =
   document.querySelector<HTMLDivElement>(".avatar-pattern")!;
 
-const avatarInitials =
-  document.querySelector<HTMLSpanElement>(".avatar-initials")!;
-
 function updateAvatar() {
   const seed = seedInput.value.trim() || "type";
 
